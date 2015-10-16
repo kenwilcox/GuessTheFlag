@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aze-kd-4nJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessTheFlag" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +15,66 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-9p-COW">
+                                <rect key="frame" x="200" y="100" width="200" height="100"/>
+                                <animations/>
+                                <state key="normal" image="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-92-bs7">
+                                <rect key="frame" x="200" y="230" width="200" height="100"/>
+                                <animations/>
+                                <state key="normal" image="us"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2o-Ke-8zP">
+                                <rect key="frame" x="200" y="360" width="200" height="100"/>
+                                <animations/>
+                                <state key="normal" image="us"/>
+                            </button>
+                        </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MGz-9p-COW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="0u8-6r-S2X"/>
+                            <constraint firstItem="xh3-92-bs7" firstAttribute="centerX" secondItem="MGz-9p-COW" secondAttribute="centerX" id="9Dd-0m-6qf"/>
+                            <constraint firstItem="v2o-Ke-8zP" firstAttribute="centerX" secondItem="xh3-92-bs7" secondAttribute="centerX" id="IG6-st-UPT"/>
+                            <constraint firstItem="xh3-92-bs7" firstAttribute="top" secondItem="MGz-9p-COW" secondAttribute="bottom" constant="30" id="S7B-Rd-ucf"/>
+                            <constraint firstItem="MGz-9p-COW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjr-Pr-7UE"/>
+                            <constraint firstItem="v2o-Ke-8zP" firstAttribute="top" secondItem="xh3-92-bs7" secondAttribute="bottom" constant="30" id="gT6-VX-yCy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="u3U-L2-cGH"/>
+                    <connections>
+                        <outlet property="button1" destination="MGz-9p-COW" id="gWX-4I-J3s"/>
+                        <outlet property="button2" destination="xh3-92-bs7" id="stN-RC-Lku"/>
+                        <outlet property="button3" destination="v2o-Ke-8zP" id="BnC-dq-A1M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1023" y="1021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6q9-g9-tVO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aze-kd-4nJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Zx-3c-tTS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="p2M-av-KLG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1WU-z4-h3s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="1021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="us" width="200" height="100"/>
+    </resources>
 </document>
