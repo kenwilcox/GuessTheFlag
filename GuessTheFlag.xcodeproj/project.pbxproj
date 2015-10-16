@@ -22,6 +22,8 @@
 		BE95D11C1BD0B8460081A211 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE95D11F1BD0B8460081A211 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE95D1211BD0B8460081A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE95D1271BD0CD420081A211 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
+		BE95D1281BD0CD420081A211 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,8 @@
 		BE95D1091BD0B8460081A211 = {
 			isa = PBXGroup;
 			children = (
+				BE95D1271BD0CD420081A211 /* LICENSE.md */,
+				BE95D1281BD0CD420081A211 /* README.md */,
 				BE95D1141BD0B8460081A211 /* GuessTheFlag */,
 				BE95D1131BD0B8460081A211 /* Products */,
 			);
@@ -285,6 +289,7 @@
 				BE95D1261BD0B8460081A211 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
