@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func askQuestion() {
+  func askQuestion(action: UIAlertAction! = nil) {
     // GameplayKit random suffle
     countries = GKRandomSource.sharedRandom().arrayByShufflingObjectsInArray(countries) as! [String]
     
@@ -52,6 +52,22 @@ class ViewController: UIViewController {
     // Get a random number - either 0, 1, 2
     correctAnswer = GKRandomSource.sharedRandom().nextIntWithUpperBound(3)
     title = countries[correctAnswer].uppercaseString
+  }
+  
+  @IBAction func buttonTapped(sender: UIButton) {
+    var title: String
+    
+    if sender.tag == correctAnswer {
+      title = "Correct"
+      ++score
+    } else {
+      title = "Wrong"
+      --score
+    }
+    
+    let ac = UIAlertController(title: title, message: "Your score is \(score).", preferredStyle: .Alert)
+    ac.addAction(UIAlertAction(title: "Continue", style: .Default, handler: askQuestion))
+    presentViewController(ac, animated: true, completion: nil)
   }
 }
 
