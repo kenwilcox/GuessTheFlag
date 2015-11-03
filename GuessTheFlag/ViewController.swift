@@ -22,7 +22,17 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-    countries += ["estonia", "france", "germany", "ireland", "italy", "monaco", "nigeria", "poland", "russia", "spain", "uk", "us"]
+    if let startWordsPath = NSBundle.mainBundle().pathForResource("flags", ofType: "txt") {
+      if let startWords = try? String(contentsOfFile: startWordsPath, usedEncoding: nil) {
+        countries = startWords.componentsSeparatedByString("\n")
+        // The build run script can add a blank line - delete any
+        countries = countries.filter({$0 != ""})
+      } else {
+        countries = ["us"]
+      }
+    } else {
+      countries = ["us"]
+    }
     
     // Flags with white "disapear" a border makes them show up properly
     button1.layer.borderWidth = 1

@@ -12,6 +12,7 @@
 		BE95D11B1BD0B8460081A211 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE95D1191BD0B8460081A211 /* Main.storyboard */; };
 		BE95D11D1BD0B8460081A211 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE95D11C1BD0B8460081A211 /* Assets.xcassets */; };
 		BE95D1201BD0B8460081A211 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE95D11E1BD0B8460081A211 /* LaunchScreen.storyboard */; };
+		BEA1DDEE1BE889F700E43A21 /* flags.txt in Resources */ = {isa = PBXBuildFile; fileRef = BEA1DDED1BE889F700E43A21 /* flags.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		BE95D1211BD0B8460081A211 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE95D1271BD0CD420081A211 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		BE95D1281BD0CD420081A211 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BEA1DDED1BE889F700E43A21 /* flags.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = flags.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		BE95D1141BD0B8460081A211 /* GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				BEA1DDED1BE889F700E43A21 /* flags.txt */,
 				BE95D1151BD0B8460081A211 /* AppDelegate.swift */,
 				BE95D1171BD0B8460081A211 /* ViewController.swift */,
 				BE95D1191BD0B8460081A211 /* Main.storyboard */,
@@ -78,6 +81,7 @@
 				BE95D10E1BD0B8460081A211 /* Sources */,
 				BE95D10F1BD0B8460081A211 /* Frameworks */,
 				BE95D1101BD0B8460081A211 /* Resources */,
+				BEA1DDEC1BE8871600E43A21 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -125,6 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA1DDEE1BE889F700E43A21 /* flags.txt in Resources */,
 				BE95D1201BD0B8460081A211 /* LaunchScreen.storyboard in Resources */,
 				BE95D11D1BD0B8460081A211 /* Assets.xcassets in Resources */,
 				BE95D11B1BD0B8460081A211 /* Main.storyboard in Resources */,
@@ -132,6 +137,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BEA1DDEC1BE8871600E43A21 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ">GuessTheFlag/flags.txt\nfor file in ./GuessTheFlag/Assets.xcassets/*imageset\ndo echo $file | cut -d/ -f4 | cut -d. -f1 >> GuessTheFlag/flags.txt\ndone";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE95D10E1BD0B8460081A211 /* Sources */ = {
