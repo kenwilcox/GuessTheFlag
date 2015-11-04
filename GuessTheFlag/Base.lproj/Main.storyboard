@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aze-kd-4nJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aze-kd-4nJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,6 +20,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGz-9p-COW">
                                 <rect key="frame" x="200" y="100" width="200" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MGz-9p-COW" secondAttribute="height" multiplier="2:1" id="vWK-MC-IVy"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blL-bm-Jyh"/>
@@ -27,6 +31,9 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xh3-92-bs7">
                                 <rect key="frame" x="200" y="230" width="200" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xh3-92-bs7" secondAttribute="height" multiplier="2:1" id="2tH-LB-3FL"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ppR-l7-Q2g"/>
@@ -35,6 +42,9 @@
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v2o-Ke-8zP">
                                 <rect key="frame" x="200" y="360" width="200" height="100"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="v2o-Ke-8zP" secondAttribute="height" multiplier="2:1" id="wfL-WC-Azj"/>
+                                </constraints>
                                 <state key="normal" image="us"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZO3-0X-uEy"/>
@@ -47,9 +57,12 @@
                             <constraint firstItem="MGz-9p-COW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="0u8-6r-S2X"/>
                             <constraint firstItem="xh3-92-bs7" firstAttribute="centerX" secondItem="MGz-9p-COW" secondAttribute="centerX" id="9Dd-0m-6qf"/>
                             <constraint firstItem="v2o-Ke-8zP" firstAttribute="centerX" secondItem="xh3-92-bs7" secondAttribute="centerX" id="IG6-st-UPT"/>
+                            <constraint firstItem="xh3-92-bs7" firstAttribute="height" secondItem="MGz-9p-COW" secondAttribute="height" id="Jj0-ae-mXA"/>
                             <constraint firstItem="xh3-92-bs7" firstAttribute="top" secondItem="MGz-9p-COW" secondAttribute="bottom" constant="30" id="S7B-Rd-ucf"/>
                             <constraint firstItem="MGz-9p-COW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vjr-Pr-7UE"/>
                             <constraint firstItem="v2o-Ke-8zP" firstAttribute="top" secondItem="xh3-92-bs7" secondAttribute="bottom" constant="30" id="gT6-VX-yCy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="v2o-Ke-8zP" secondAttribute="bottom" constant="20" id="grW-mz-rGk"/>
+                            <constraint firstItem="xh3-92-bs7" firstAttribute="height" secondItem="v2o-Ke-8zP" secondAttribute="height" id="vYy-Cw-7x7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u3U-L2-cGH"/>
